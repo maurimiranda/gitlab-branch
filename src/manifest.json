@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Custom GitLab Branch Name",
+  "description": "This extension will change new branch name in GitLab",
+  "version": "1.0",
+  "permissions": [
+    "tabs", "activeTab", "webNavigation", "*://gitlab.com/Admin_Siasar/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://gitlab.com/Admin_Siasar/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
